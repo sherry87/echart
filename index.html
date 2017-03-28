@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>欢迎~折线图</title>
+    <title>欢迎~</title>
 
     <!-- BOOTSTRAP STYLES-->
     <link href="assets/css/bootstrap.css" rel="stylesheet" />
@@ -18,16 +18,26 @@
 </head>
 <body>
     <div id="wrapper">
+        <nav class="navbar navbar-default navbar-cls-top " role="navigation" style="margin-bottom: 0">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">ECHART</a>
+            </div>
+        </nav>
         <!-- /. NAV TOP  -->
         <nav class="navbar-default navbar-side" role="navigation">
             <div class="sidebar-collapse">
                 <ul class="nav" id="main-menu">
-                    
-                    <li class="active">
+                    <li>
                         <a href="#"><i class="fa fa-desktop "></i>echart <span class="fa arrow"></span></a>
                          <ul class="nav nav-second-level">
                             <li>
-                                <a class="active-menu" href="line.html"><i class="fa fa-toggle-on"></i>折线图</a>
+                                <a href="line.html"><i class="fa fa-toggle-on"></i>折线图</a>
                             </li>
                             <li>
                                 <a href="timeLine.html"><i class="fa fa-bell "></i>时间折线图</a>
@@ -41,7 +51,7 @@
         <div id="page-wrapper">
             <div id="page-inner">
 				<div class="row">
-					<div id="main" style="height:400px"></div>
+					
 				</div>
             </div>
             <!-- /. PAGE INNER  -->
@@ -61,10 +71,6 @@
     <!-- METISMENU SCRIPTS -->
     <script src="assets/js/jquery.metisMenu.js"></script>
  <script src="assets/js/custom.js"></script>
- <script src="js/jquery-1.8.3.min.js"></script>
-		<script src="js/dateFormate.js"></script>
-		<script src="js/echarts/echarts.js"></script>
-		<script src="js/test/line.js"></script>
 
 </body>
 </html>

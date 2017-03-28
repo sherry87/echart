@@ -1,36 +1,69 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<title>时间坐标折线图</title>
-		<script src="js/jquery-1.8.3.min.js"></script>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>欢迎~时间折线图</title>
+
+    <!-- BOOTSTRAP STYLES-->
+    <link href="assets/css/bootstrap.css" rel="stylesheet" />
+    <!-- FONTAWESOME STYLES-->
+    <link href="assets/css/font-awesome.css" rel="stylesheet" />
+       <!--CUSTOM BASIC STYLES-->
+    <link href="assets/css/basic.css" rel="stylesheet" />
+    <!--CUSTOM MAIN STYLES-->
+    <link href="assets/css/custom.css" rel="stylesheet" />
+    <!-- GOOGLE FONTS-->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+</head>
+<body>
+    <div id="wrapper">
+        <!-- /. NAV TOP  -->
+        <nav class="navbar-default navbar-side" role="navigation">
+            <div class="sidebar-collapse">
+                <ul class="nav" id="main-menu">
+                    <li class="active">
+                        <a href="#"><i class="fa fa-desktop "></i>echart <span class="fa arrow"></span></a>
+                         <ul class="nav nav-second-level">
+                            <li>
+                                <a  href="line.html"><i class="fa fa-toggle-on"></i>折线图</a>
+                            </li>
+                            <li>
+                                <a class="active-menu" href="timeLine.html"><i class="fa fa-bell "></i>时间折线图</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <!-- /. NAV SIDE  -->
+        <div id="page-wrapper">
+            <div id="page-inner">
+				<div class="row">
+					<div id="main" style="height:400px"></div>
+				</div>
+            </div>
+            <!-- /. PAGE INNER  -->
+        </div>
+        <!-- /. PAGE WRAPPER  -->
+    </div>
+    <!-- /. WRAPPER  -->
+
+    <div id="footer-sec">
+    </div>
+    <!-- /. FOOTER  -->
+    <!-- SCRIPTS -AT THE BOTOM TO REDUCE THE LOAD TIME-->
+    <!-- JQUERY SCRIPTS -->
+    <script src="assets/js/jquery-1.10.2.js"></script>
+    <!-- BOOTSTRAP SCRIPTS -->
+    <script src="assets/js/bootstrap.js"></script>
+    <!-- METISMENU SCRIPTS -->
+    <script src="assets/js/jquery.metisMenu.js"></script>
+ <script src="assets/js/custom.js"></script>
+ <script src="js/jquery-1.8.3.min.js"></script>
 		<script src="js/dateFormate.js"></script>
 		<script src="js/echarts/echarts.js"></script>
 		<script src="js/test/timeLine.js"></script>
-	</head>
-	<body>
-		<!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-		<div id="main" style="height:400px"></div>
-	</body>
+
+</body>
 </html>
-<script>
-	require.config({
-		paths: {
-			echarts: 'js/echarts' //echarts.js路径
-		}
-	});
-	
-	var opt = chartOptions();
-	require(
-		[
-			'echarts',
-			'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
-		],
-		function(ec) {
-			// 基于准备好的dom，初始化echarts图表
-			var myChart = ec.init(document.getElementById('main'));
-			// 为echarts对象加载数据 
-			myChart.setOption(opt);
-		}
-	);
-</script>

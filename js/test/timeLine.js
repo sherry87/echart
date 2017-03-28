@@ -1,8 +1,8 @@
 function chartOptions() {
 	var option = {
-		title: {
+		/*title: {
 			text: '时间坐标折线图'
-		},
+		},*/
 		linkStyle: {
 			type: "curve"
 		},
@@ -79,3 +79,25 @@ function seriesArr(recordsArr,name){
 	return ser;
 }
 
+
+$(function(){
+	require.config({
+		paths: {
+			echarts: 'js/echarts' //echarts.js路径
+		}
+	});
+	
+	var opt = chartOptions();
+	require(
+		[
+			'echarts',
+			'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+		],
+		function(ec) {
+			// 基于准备好的dom，初始化echarts图表
+			var myChart = ec.init(document.getElementById('main'));
+			// 为echarts对象加载数据 
+			myChart.setOption(opt);
+		}
+	);
+});
